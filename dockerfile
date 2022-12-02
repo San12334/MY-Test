@@ -1,7 +1,5 @@
 FROM tomcat/tomcat01
 Maintainer "santhoshkumar1233@gmail.com"
-RUN mkdir cd /opt/Tomcat
-WORKDIR cd /opt/Tomcat
-ADD https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.69/bin/apache-tomcat-9.0.69.tar.gz .
-RUN tar -xvf apache-tomcat-9.0.69.tar.gz
-
+RUN mkdir /opt/tomcat
+RUN cd /opt/tomcat && wget https://downloads.apache.org/tomcat/tomcat-9/v9.0.31/bin/apache-tomcat-9.0.31.tar.gz
+RUN cd /opt/tomcat && tar -xvf apache-tomcat-9.0.31.tar.gz
